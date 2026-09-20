@@ -3,6 +3,8 @@
 LAMP のお問い合わせフォーム（[/contacts/no-code-web](https://lamp.design/contacts/no-code-web)）に
 届く案件相談を、**確度・優先度**で仕分けて A / B / C / 除外 に振り分けるCLI。
 
+**▶ [デモ画面](https://claude.ai/artifact/CiidBuNkU1LCsrNDRcN5fR)** — 20件を読み込んで［仕分けを実行］を押すと、判定の過程と内訳が見られる。
+
 ## 考え方
 
 判断を Jev に丸投げしない。**確定的に決まることはコードで計算し、自由記述からしか
@@ -99,6 +101,8 @@ uv run python -m triage.generate --count 80 --seed 11 \
 生成データはあくまで挙動確認用で、しきい値のチューニングには実際の受信データを使うこと。
 
 ## デモ画面
+
+**https://claude.ai/artifact/CiidBuNkU1LCsrNDRcN5fR**
 
 `demo/triage-demo.html` は、100件のプールから20件を引いて仕分けを見せるページ。
 判定結果は `out/pool_results.json`（実際に Jev へ通した結果）を埋め込んでいる。
